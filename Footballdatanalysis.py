@@ -3,6 +3,7 @@
 from pathlib import Path
 import matplotlib.pyplot as plt
 import pandas as pd
+import tkinter as tk
 
 if __name__ == "__main__":
 	Barca={}
@@ -20,3 +21,8 @@ if __name__ == "__main__":
 	print(Barca['Awaywins'])
 	Barca['Homewins'].plot(x='AwayTeam', y='FTHG', kind='scatter', title='Barcelona Home Goals Over Time')
 	plt.show()
+	root = tk.Tk()
+	root.mainloop()
+    
+	plt.savefig('Barcelona_Home_Goals_Over_Time.png')
+	
